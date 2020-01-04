@@ -1,6 +1,6 @@
 /*
  * Title: hw1_1.cpp
- * Abstract: .
+ * Abstract: This program reads an input file name from a user.After reading the numbers from the file, the program displays the closest distance between two numbers among the numbers.
  * Author: Mark Mariscal
  * ID: 7/19/1988
  * Date: 01/3/2020
