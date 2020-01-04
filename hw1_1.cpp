@@ -10,6 +10,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -48,15 +49,13 @@ int main()
 	    
     }
     myFile.close();//closes file 
-		cout << "logic in array" << endl;
+    cout << "logic in array" << endl;
    //This is how we are checking for the distance:
   	for (int i = 0; i < count - 1; i++){ //is going from 0 to end - 1 in the array
       for (int j = i + 1; j < count; j++){ //is going from 1 to the end of the array.
         	temp = array[i] - array[j]; // this is making a temp int of the differences of the array
-        	if(temp < 0){
-                temp *= -1;  //if - int number change to positive number 
-            } 
-        	if( temp < min && temp > 0){ // if the temp value is less then 100
+            temp = abs(temp);//makes abs value of temp value
+        	if( temp < min && temp > 0){ // if the temp value is less then 100 and more than 0
             min = temp; // min becomes the temp value 
             num1 = array[i];//num1 becomes the value i in array
             num2 = array[j];//num2 becomes the value j in array
