@@ -18,41 +18,43 @@ int main()
     ifstream myFile;
     string fileName;
   
-  	int *array;
+  	int *array; //pointer with array
     int num;
-  	int count;
+  	int count; // gives us the count of the array length 
   
-  	int temp, num1, num2;
-  	int min = 100;
-    cout << "Enter input file name: ";
-    cin >> fileName;
+  	int temp, num1, num2; // temp number and are distance numbers  we store numbers in our array
+  	int min = 100; // min distance so a placeholder
+    cout << "Enter input file name: "; //asks input
+    cin >> fileName; // recieves input
 
 
-    myFile.open(fileName.c_str());
+    myFile.open(fileName.c_str()); //opens the file
 
-    cout<< fileName + " is opened" << endl;
-  	cout << "Reading count into array" <<endl;
-    if (myFile >> num)
+    cout<< fileName + " is opened" << endl; //tells user file is open
+  	cout << "Reading count into array" <<endl; //reads count into array
+    if (myFile >> num) // if there is an input then count reads first line
     {
       count = num;
     }
   
-  	array = new int [count];
-    count = 0;
-    while(myFile >> num) 
+  	array = new int [count]; //array with count , create size of array
+  	count = 0;
+    while(myFile >> num) //start after first line
     {
         cout << "Reading data from file. \n";
-        array[count] = num;
+        array[count] = num;//adds number to array
 				cout<< num << endl; // Prints numbers.
-	      count++;
+      	count++;
+	    
     }
-    myFile.close();
+    myFile.close();//closes file 
 		cout << "logic in array" << endl;
+   //This is how we are checking for the distance:
   	for (int i = 0; i < count - 1; i++){ //is going from 0 to end - 1 in the array
       for (int j = i + 1; j < count; j++){ //is going from 1 to the end of the array.
         	temp = array[i] - array[j]; // this is making a temp int of the differences of the array
         	if(temp < 0){
-                temp *= -1;  //storing that value into an absolute temp value
+                temp *= -1;  //if - int number change to positive number 
             } 
         	if( temp < min && temp > 0){ // if the temp value is less then 100
             min = temp; // min becomes the temp value 
@@ -62,9 +64,10 @@ int main()
       }
     }
   
+  	//print files to screen
   	cout << "Min distance: " << min << endl;
   	cout << "Two numbers for min distance: " << num1 << " and " << num2;
-  	delete[] array;
+  	delete[] array; //deletes arrray
     cout << "\n is closed";
 
     return 0;
