@@ -33,8 +33,8 @@ int main()
 
     myFile.open(fileName.c_str()); //opens the file
 
-    cout<< fileName + " is opened" << endl; //tells user file is open
-    cout << "Reading count into array" <<endl; //reads count into array
+    //cout<< fileName + " is opened" << endl; //tells user file is open
+    //cout << "Reading count into array" <<endl; //reads count into array
     if (myFile >> num) // if there is an input then count reads first line
     {
       count = num;
@@ -44,9 +44,9 @@ int main()
     count = 0;
     while(myFile >> num) //start after first line
     {
-        cout << "Reading data from file. \n";
+    //    cout << "Reading data from file. \n";
         array[count] = num;//adds number to array
-        cout<< num << endl; // Prints numbers.
+      //  cout<< num << endl; // Prints numbers.
         count++;
       
     }
@@ -59,10 +59,7 @@ int main()
           temp = array[i] - array[j]; // this is making a temp int of the differences of the array so say this is 5
             temp = abs(temp);//makes abs value of temp value
 
-            //temp is 5 <100 temp is > 0
-            //min becomes the temp number so min becomes now 5.
-            //so min is 5
-            //num1 is the distance numbers num1 is 50 and num2 is 55
+           
           
           if( temp < min && temp > 0){ // if the temp value is less then 100 and more than 0
             min = temp; // min becomes the temp value 
@@ -70,16 +67,8 @@ int main()
             num2 = array[j];//num2 becomes the value j in array
           }
           
-          //temp is 5 <100 temp is > 0
-          //min becomes the temp number so min becomes now 5.
-          //so min is 5
-          //num1 is the distance in the array at 50
-          //num2 is the distance in the array at 55
 
-          //if 5 = 5
-          //min becomes the temp so min is 5
-          //num3 is the distance in the array at 50
-          //num4 is the distance in the array at 55
+        
         if( temp == min && num1 != array[i]){ 
             num3 = array[i];//num3 becomes the value i in array
             num4 = array[j];//num4 becomes the value j in array
