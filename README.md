@@ -1,1 +1,2 @@
 # CST370_Hw1
+A C++ program called that reads an input file name from a user. The input file contains several integer numbers. After reading the numbers from the file, my program displays the closest distance between two numbers among the numbers. For example, if the input numbers are -1, 10, 3, -15, 7, 20, 150, 200, 50, and 4, the answer should be 1 because the distance between 3 and 4 is 1. Note that the distance between two numbers is always positive. 
